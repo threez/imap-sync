@@ -1,1 +1,5 @@
 Copies messages from one IMAP server to another. Uses configuration file for safety.
+
+== Usage
+ruby imap-sync.rb # use configuration file from the script directory
+ruby imap-sync.rb http://pastie.org/447193.txt?key=ufvslgjncygggz9f3zq3la  # use configuration file from the given URL

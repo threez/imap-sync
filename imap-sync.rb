@@ -2,7 +2,16 @@
 
 if $PROGRAM_NAME == __FILE__
   require 'yaml'
-  C = YAML.load(File.read('configuration.yml'))
+  if ARGV
+    require 'open-uri'
+    begin
+      C = YAML.load(open(ARGV[0]))
+    rescue
+      raise "Unable to fetch configuration file."
+    end
+  else
+    C = YAML.load(File.read('configuration.yml'))
+  end
 end
 
 require 'net/imap'
