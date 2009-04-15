@@ -1,0 +1,24 @@
+# Source server connection info.
+source:
+  host: imap.gmail.com
+  port: 993
+  ssl: true
+  username: rubyimaptest1@gmail.com
+  password: 12345678q
+
+# Destination server connection info.
+destination:
+  host: imap.gmail.com
+  port: 993
+  ssl: true
+  username: rubyimaptest2@gmail.com
+  password: 12345678q
+
+# Mapping of source folders to destination folders. The key is the name of the folder on the source server, the value
+# is the name on the destination server. Any folder not specified here will be ignored. If a destination folder does
+# not exist, it will be created.
+mappings:
+  "Inbox": "Inbox"
+  # "[Gmail] Drafts": "Drafts"
+  # "[Gmail] Sent Mail": "Sent"
+  # "[Gmail] Trash": "Trash"
